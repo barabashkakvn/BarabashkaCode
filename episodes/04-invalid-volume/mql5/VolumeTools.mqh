@@ -1,10 +1,21 @@
 //+------------------------------------------------------------------+
-//| VolumeTools.mqh                                                  |
+//|                                                  VolumeTools.mqh |
+//|                             Copyright © 2026, Volodymyr Karputov |
+//|                      https://www.mql5.com/en/users/barabashkakvn |
+//+------------------------------------------------------------------+
+#property copyright "Copyright © 2026, Volodymyr Karputov"
+#property link      "https://www.mql5.com/en/users/barabashkakvn"
+#property version "1.003"
+//+------------------------------------------------------------------+
 //| Correct lot handling: round DOWN to SYMBOL_VOLUME_STEP, respect  |
 //| MIN / MAX / LIMIT, and treat 0 as "do not trade".                |
+//|                                                                  |
+//| VolumeSpecGet     volume properties of the symbol from server    |
+//| LotNormalize      requested lots -> valid lots or 0.0            |
+//| CheckVolumeValue  final check right before OrderSend             |
+//| VolumeUsed        positions + pending orders (for LIMIT)         |
 //| Based on the checks from https://www.mql5.com/ru/articles/2555   |
 //+------------------------------------------------------------------+
-#property strict
 
 //--- volume properties of a symbol (can be filled from the server or by hand)
 struct VolumeSpec
