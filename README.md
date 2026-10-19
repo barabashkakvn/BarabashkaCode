@@ -12,6 +12,7 @@ Also: Python + MetaTrader 5 and writing code with AI.
 |---|---|---|
 | 01 | [SL / TP catcher](episodes/01-sl-tp-catcher/) | EA that alerts on every position closed by Stop Loss or Take Profit (any symbol, any magic) |
 | 04 | [Invalid volume](episodes/04-invalid-volume/) | Correct lot normalization (MIN / MAX / STEP / LIMIT) and a script that compares wrong vs right |
+| 05 | ["1 minute OHLC" vs real ticks](episodes/05-ohlc-vs-ticks/) | A loss-guard EA, tester configs and a chart: why an equity guard closes at 237% of the limit on OHLC and 102% on real ticks |
 
 Numbers match the videos; a gap means that number was not a code episode.
 
@@ -39,6 +40,7 @@ scripts into `MQL5/Scripts`; keep an `.mqh` next to the file that includes it. C
 |---|---|---|
 | 01 | [SL / TP catcher](episodes/01-sl-tp-catcher/) | радник: Alert на кожне закриття позиції по Stop Loss або Take Profit (усі символи, усі magic) |
 | 04 | [Invalid volume](episodes/04-invalid-volume/) | правильна нормалізація лота (MIN / MAX / STEP / LIMIT) і скрипт «неправильно / правильно» |
+| 05 | [«1 minute OHLC» проти реальних тиків](episodes/05-ohlc-vs-ticks/) | радник-сторож збитку, конфіги тестера і графік: чому на OHLC закрито на 237 % ліміту, а на реальних тиках — на 102 % |
 
 Як користуватись: скопіюйте файли випуску в теку `MQL5` терміналу (*Файл → Відкрити каталог даних*):
 радники — у `MQL5/Experts`, скрипти — у `MQL5/Scripts`, `.mqh` — поруч із файлом, що його підключає. Скомпілюйте в MetaEditor.
