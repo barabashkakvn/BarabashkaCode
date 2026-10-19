@@ -1,7 +1,6 @@
 # 05 — "1 minute OHLC" vs real ticks: a loss guard in the Strategy Tester
 
-Forum thread: [Testing a daily loss limit EA: why "1 minute OHLC" gave me 105% and real ticks gave 90%](https://www.mql5.com/en/forum/518423) ·
-documentation: [Tick Generation Modes](https://www.mql5.com/en/docs/runtime/testing#ticks), [Using real ticks during a test](https://www.mql5.com/en/docs/runtime/testing) ·
+Documentation: [Tick Generation Modes](https://www.mql5.com/en/docs/runtime/testing#ticks), [Using real ticks during a test](https://www.mql5.com/en/docs/runtime/testing) ·
 article: [The Algorithm of Ticks' Generation within the Strategy Tester](https://www.mql5.com/en/articles/75)
 
 **Problem.** A loss guard must close the trade at −$500. In the tester it closed at −$1,183.

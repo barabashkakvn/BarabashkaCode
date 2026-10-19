@@ -5,7 +5,7 @@
 //+------------------------------------------------------------------+
 #property copyright "Copyright © 2026, Volodymyr Karputov"
 #property link      "https://www.mql5.com/en/users/barabashkakvn"
-#property version "1.003"
+#property version "1.004"
 //+------------------------------------------------------------------+
 //| Correct lot handling: round DOWN to SYMBOL_VOLUME_STEP, respect  |
 //| MIN / MAX / LIMIT, and treat 0 as "do not trade".                |

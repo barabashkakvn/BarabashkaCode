@@ -5,7 +5,7 @@
 //+------------------------------------------------------------------+
 #property copyright "Copyright © 2026, Volodymyr Karputov"
 #property link      "https://www.mql5.com/en/users/barabashkakvn"
-#property version "1.001"
+#property version "1.002"
 #property description "Loss guard in the Strategy Tester: run it in \"1 minute OHLC\" and in"
 #property description "\"Every tick based on real ticks\" and compare the journal and the CSV."
 //+------------------------------------------------------------------+
@@ -13,7 +13,6 @@
 //| The guard closes the position as soon as the loss reaches the    |
 //| limit. The journal shows how far past the limit it really closed |
 //| and the CSV (Common\Files) keeps every tick for the chart.       |
-//| Idea:   https://www.mql5.com/en/forum/518423                     |
 //| Modes:  https://www.mql5.com/en/docs/runtime/testing#ticks       |
 //+------------------------------------------------------------------+
 #include <Trade\Trade.mqh>

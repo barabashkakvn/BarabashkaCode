@@ -5,7 +5,7 @@
 //+------------------------------------------------------------------+
 #property copyright "Copyright © 2026, Volodymyr Karputov"
 #property link      "https://www.mql5.com/en/users/barabashkakvn"
-#property version "1.003"
+#property version "1.004"
 #property description "Runs the same requested lots through a WRONG and a RIGHT calculation."
 #property description "Nothing is traded, everything goes to the journal."
 #property script_show_inputs
@@ -16,7 +16,6 @@
 //| Six typical symbol specifications are set by hand, so the result |
 //| is the same everywhere; the last row uses the real properties of |
 //| the chart symbol and the volume already used on it.              |
-//| Idea:   https://www.mql5.com/en/forum/498379                     |
 //| Checks: https://www.mql5.com/ru/articles/2555                    |
 //+------------------------------------------------------------------+
 #include "VolumeTools.mqh"

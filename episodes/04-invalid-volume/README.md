@@ -1,7 +1,6 @@
 # 04 — Invalid volume: how to normalize a lot
 
-Forum thread: [Validation failed [Invalid Volume]](https://www.mql5.com/en/forum/498379) ·
-checks from the article [«Какие проверки должен пройти торговый робот перед публикацией в Маркете»](https://www.mql5.com/ru/articles/2555)
+Checks from the article [«Какие проверки должен пройти торговый робот перед публикацией в Маркете»](https://www.mql5.com/ru/articles/2555)
 
 **Problem.** An EA opens a trade but cannot close it: hundreds of `[Invalid volume]` lines and a log of 2 GB during Market validation.
 

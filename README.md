@@ -1,7 +1,7 @@
 # BarabashkaCode
 
 Code for the **BARABASHKA** (English) and **БАРАБАШКА** (Ukrainian) YouTube channels:
-short MQL5 episodes — a real problem from the MQL5 forum, why it happens, and how to do it right.
+short MQL5 episodes — a real problem, why it happens, and how to do it right.
 Also: Python + MetaTrader 5 and writing code with AI.
 
 > Educational code, not trading or investment advice.
@@ -31,7 +31,7 @@ scripts into `MQL5/Scripts`; keep an `.mqh` next to the file that includes it. C
 ## Українською
 
 Код до YouTube-каналів **БАРАБАШКА** (українською) і **BARABASHKA** (англійською):
-короткі випуски про MQL5 — реальна проблема з форуму MQL5, чому так стається і як правильно.
+короткі випуски про MQL5 — реальна проблема, чому так стається і як правильно.
 А також Python + MetaTrader 5 і код за допомогою ШІ.
 
 > Навчальний код, а не торгові чи інвестиційні поради.
