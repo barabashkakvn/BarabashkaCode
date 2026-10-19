@@ -74,7 +74,7 @@ At 03:32 (server time) EURUSD moved 86 points in one minute: 1.12894 → 1.13739
 
 ![Loss in both modes](images/guard_compare.png)
 
-Video: [БАРАБАШКА (UA)](https://youtu.be/fA6RgbopOhU) · BARABASHKA (EN) — coming soon.
+Video: [BARABASHKA (EN)](https://youtu.be/2bfYMYul1Z4) · [БАРАБАШКА (UA)](https://youtu.be/fA6RgbopOhU)
 
 ---
 
@@ -102,4 +102,4 @@ Video: [БАРАБАШКА (UA)](https://youtu.be/fA6RgbopOhU) · BARABASHKA (EN
 4. У журналі тестера — підсумок кожного прогону. В OHLC найбільше тиків за хвилину — **4**, сторож спрацьовує значно вище 100 %; на реальних тиках — сотні тиків за хвилину і результат близько **100 %**.
 5. Графік (необов'язково): `python python/plot_guard.py` (`pip install pandas matplotlib`).
 
-Відео: [БАРАБАШКА (UA)](https://youtu.be/fA6RgbopOhU) · англійська версія — скоро.
+Відео: [БАРАБАШКА (UA)](https://youtu.be/fA6RgbopOhU) · [BARABASHKA (EN)](https://youtu.be/2bfYMYul1Z4)
