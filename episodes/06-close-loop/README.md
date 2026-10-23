@@ -64,7 +64,7 @@ lots 0.01 … 0.05, so the lot shows the item's number; one hour after the fifth
    ```
    With visual mode on, the chart comment shows the list with indexes, and for the tickets array every ticket and "no such position".
 
-Video: [БАРАБАШКА (UA)](https://youtu.be/37sYYVO4mh8) · EN — coming soon
+Video: [BARABASHKA (EN)](https://youtu.be/9HwAX2x836I) · [БАРАБАШКА (UA)](https://youtu.be/37sYYVO4mh8)
 
 ---
 
@@ -97,4 +97,4 @@ for(int i = PositionsTotal() - 1; i >= 0; i--)   // правильно: з кі�
    Або при **закритому** терміналі: `terminal64.exe /config:<повний шлях>\tester_positions_wrong.ini` (усього 10 конфігів).
 3. У журналі тестера — кожен крок циклу і підсумок, наприклад `After the loop: 2 of 5 positions left`.
 
-Відео: [БАРАБАШКА (UA)](https://youtu.be/37sYYVO4mh8) · EN — скоро
+Відео: [БАРАБАШКА (UA)](https://youtu.be/37sYYVO4mh8) · [BARABASHKA (EN)](https://youtu.be/9HwAX2x836I)
