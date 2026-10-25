@@ -5,9 +5,16 @@
 //+------------------------------------------------------------------+
 #property copyright "Copyright © 2026, Volodymyr Karputov"
 #property link      "https://www.mql5.com/en/users/barabashkakvn"
-#property version "1.002"
+#property version "1.003"
 #property description "Alerts and prints a full report whenever ANY position (any "
 #property description "symbol, any magic number) is closed by Stop Loss or Take Profit."
+//+------------------------------------------------------------------+
+//| 1.003: the closing deal is selected with HistoryDealSelect().    |
+//| 1.002 read it right after HistorySelectByPosition() and in the   |
+//| tester got 0 (DEAL_REASON_CLIENT) and error 4755 for every deal. |
+//| Docs: https://www.mql5.com/en/docs/event_handlers/ontradetransaction |
+//|       https://www.mql5.com/en/docs/trading/historydealselect         |
+//|       https://www.mql5.com/en/docs/constants/tradingconstants/dealproperties |
 //+------------------------------------------------------------------+
 //| Fires on every trade event of the account                        |
 //+------------------------------------------------------------------+
@@ -18,8 +25,9 @@ void OnTradeTransaction(const MqlTradeTransaction &trans,
 // We only care about freshly added deals
    if(trans.type != TRADE_TRANSACTION_DEAL_ADD)
       return;
-// Load all deals of this position (open + close) into the history cache
-   if(!HistorySelectByPosition(trans.position))
+// Select the deal itself: right after HistorySelectByPosition() the deal
+// properties by ticket are not readable yet (0 and error 4755 in the tester)
+   if(!HistoryDealSelect(trans.deal))
       return;
 // Keep only closing deals made by the server because of SL or TP
    ENUM_DEAL_REASON reason = (ENUM_DEAL_REASON)HistoryDealGetInteger(trans.deal, DEAL_REASON);
@@ -27,7 +35,12 @@ void OnTradeTransaction(const MqlTradeTransaction &trans,
       return;
    if(reason != DEAL_REASON_SL && reason != DEAL_REASON_TP)
       return;
-// Find the opening deal of the position
+   string symbol = HistoryDealGetString(trans.deal, DEAL_SYMBOL);
+   long   magic  = HistoryDealGetInteger(trans.deal, DEAL_MAGIC);
+   string exit   = DealRow(trans.deal, (int)SymbolInfoInteger(symbol, SYMBOL_DIGITS), false);
+// Load all deals of this position (open + close) and find the opening deal
+   if(!HistorySelectByPosition(trans.position))
+      return;
    ulong open_deal = 0;
    for(int i = 0; i < HistoryDealsTotal() && open_deal == 0; i++)
      {
@@ -36,14 +49,11 @@ void OnTradeTransaction(const MqlTradeTransaction &trans,
          open_deal = deal;
      }
 // Two rows, same columns as the terminal Deals tab: entry deal, then exit deal
-   string symbol = HistoryDealGetString(trans.deal, DEAL_SYMBOL);
-   int    digits = (int)SymbolInfoInteger(symbol, SYMBOL_DIGITS);
    string msg = StringFormat("%s | %s | magic %I64d\n%s\n%s",
                              reason == DEAL_REASON_SL ? "SL" : "TP",
-                             symbol,
-                             HistoryDealGetInteger(trans.deal, DEAL_MAGIC),
-                             DealRow(open_deal, digits, true),
-                             DealRow(trans.deal, digits, false));
+                             symbol, magic,
+                             DealRow(open_deal, (int)SymbolInfoInteger(symbol, SYMBOL_DIGITS), true),
+                             exit);
    Alert(msg);
    Print(msg);
   }

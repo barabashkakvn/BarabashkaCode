@@ -10,7 +10,7 @@ Also: Python + MetaTrader 5 and writing code with AI.
 
 | # | Episode | What you get |
 |---|---|---|
-| 01 | [SL / TP catcher](episodes/01-sl-tp-catcher/) | EA that alerts on every position closed by Stop Loss or Take Profit (any symbol, any magic) |
+| 01 | [SL / TP catcher](episodes/01-sl-tp-catcher/) | EA that alerts on every position closed by Stop Loss or Take Profit (any symbol, any magic); 1.003: `HistoryDealSelect` fix + tester bench |
 | 04 | [Invalid volume](episodes/04-invalid-volume/) | Correct lot normalization (MIN / MAX / STEP / LIMIT) and a script that compares wrong vs right |
 | 05 | ["1 minute OHLC" vs real ticks](episodes/05-ohlc-vs-ticks/) | A loss-guard EA, tester configs and a chart: why an equity guard closes at 237% of the limit on OHLC and 102% on real ticks |
 | 06 | [Close all positions: loop from the end](episodes/06-close-loop/) | An EA and 10 tester configs: the loop from 0 skips every second position, order and chart object; `while` closes someone else's or gets stuck; cleaning a tickets array |
@@ -39,7 +39,7 @@ scripts into `MQL5/Scripts`; keep an `.mqh` next to the file that includes it. C
 
 | № | Випуск | Що всередині |
 |---|---|---|
-| 01 | [SL / TP catcher](episodes/01-sl-tp-catcher/) | радник: Alert на кожне закриття позиції по Stop Loss або Take Profit (усі символи, усі magic) |
+| 01 | [SL / TP catcher](episodes/01-sl-tp-catcher/) | радник: Alert на кожне закриття позиції по Stop Loss або Take Profit (усі символи, усі magic); 1.003: виправлення `HistoryDealSelect` + стенд для тестера |
 | 04 | [Invalid volume](episodes/04-invalid-volume/) | правильна нормалізація лота (MIN / MAX / STEP / LIMIT) і скрипт «неправильно / правильно» |
 | 05 | [«1 minute OHLC» проти реальних тиків](episodes/05-ohlc-vs-ticks/) | радник-сторож збитку, конфіги тестера і графік: чому на OHLC закрито на 237 % ліміту, а на реальних тиках — на 102 % |
 | 06 | [Закрити всі позиції: цикл з кінця](episodes/06-close-loop/) | радник і 10 конфігів тестера: цикл від 0 пропускає кожну другу позицію, ордер і об'єкт; `while` закриває чуже або зависає; чистка масиву тікетів |
