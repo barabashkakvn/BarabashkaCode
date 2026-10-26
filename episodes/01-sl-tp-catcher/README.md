@@ -67,7 +67,7 @@ We checked this in the Strategy Tester only. If a live account behaves different
 3. **Read the Journal.** Wrong modes print `missed deal #… reason = CLIENT, error 4755`; the right one prints `Alert:` and the two deal rows.
    With visual mode on, the chart comment shows the counters and one line per close.
 
-Video: re-shoot in progress — BARABASHKA (EN) / БАРАБАШКА (UA), links coming.
+Video: [БАРАБАШКА (UA)](https://youtu.be/NQZel53f2wc) · BARABASHKA (EN) — coming.
 
 ---
 
@@ -100,4 +100,4 @@ Video: re-shoot in progress — BARABASHKA (EN) / БАРАБАШКА (UA), links
    Або при **закритому** терміналі: `terminal64.exe /config:<повний шлях>\tester_right.ini` (а також `tester_nohistory.ini`, `tester_byposition.ini`).
 3. У журналі тестера: неправильні режими — `missed deal #… reason = CLIENT, error 4755`, правильний — `Alert:` і два рядки угод.
 
-Відео: перезйомка — БАРАБАШКА (UA) / BARABASHKA (EN), посилання згодом.
+Відео: [БАРАБАШКА (UA)](https://youtu.be/NQZel53f2wc) · BARABASHKA (EN) — згодом.
